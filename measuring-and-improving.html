@@ -48,7 +48,17 @@
 				</div>
 				<!-- Two -->
 					<section id="two">
-						<p>Have you ever tried to ask a language model a mathematical question?</p>
+						<img src="images/language_models_math.png" class="centered" title="math in language models">
+						<p>Have you ever tried to do mathematics with pretrained language models? It turns out that even the most basic questions can be very challenging for them. Simple question requiring basic addition or other elementary operation can bamboozle an otherwise very well prepared model. (But don't trust us, <a href="https://transformer.huggingface.co/">try it yourself.</a>)<br \>
+							We would, however, expect such models to possess some mathematical abilities. As an example language model to investigate we choose BERT. We scrutinize it's mathematical abilities and suggest that self-supervised training on explanations of how the answer to given mathematical question was derived can improve mathematics in language models. We also suggest a new loss for utlization of the explanations.
+
+							As a benchmark for measuring mathematical skills we use AQuA-RAT. AQuA-RAT is a data set with math word problems in a form of a closed test. That is each data point consists of question, possible answer, and the information which answer is correct. What's specific to AQuA-RAT is that it is augmented by a rationale. An explanation of how the solution was derived. We use that for self-supervised training and <b>we don't use rationales for fine-tuning</b>.
+
+						</p>
+						<img src="images/aqua.gif" class="centered" title="aqua-rat">
+						<img src="images/NROP.gif" class="centered" title="nrop">
+						<img src="images/results.png" class="centered" title="results">
+						<img src="images/tsne.png" class="centered" title="tsne", style="width: 100%">
 					</section>
 
 				<!-- Three -->

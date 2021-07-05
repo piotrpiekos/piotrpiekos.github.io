@@ -75,7 +75,11 @@ input, select, textarea {
 }
 
 /* Basic */
-
+    .centered {
+		display:block;
+		margin-left:auto;
+		margin-right:auto
+	}
 	html {
 		box-sizing: border-box;
 	}
