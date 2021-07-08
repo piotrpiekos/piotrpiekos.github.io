@@ -16,8 +16,8 @@
 		<!-- Header -->
 			<header id="header" class="hblog">
 				<div class="inner">
-					<a href="#" class="icon solid fa-home home onlymain"><span class="label">Home</span></a>
-					<h1 class="onlyphone"><strong>Piotr Piękos</strong></h1>
+					<a href="index.html" class="icon solid fa-home home onlymain"><span class="label">Home</span></a>
+					<h1 class="onlyphone"><strong><a href="index.html">Piotr Piękos</a></strong></h1>
 				</div>
 			</header>
 
@@ -36,7 +36,7 @@
 						</p>
 						</div>
 						<ul class="actions" style="margin-left:5%">
-							<li><a href="#" class="button">arXiv</a></li>
+							<li><a href="https://arxiv.org/abs/2106.03921" class="button">arXiv</a></li>
 						</ul>
 						</div>
 					</section>
@@ -47,57 +47,93 @@
 					</div>
 				</div>
 				<!-- Two -->
-					<section id="two">
-						<img src="images/language_models_math.png" class="centered" title="math in language models">
+					<section id="two" class="centered">
+						<img src="images/language_models_math.png" class="centered" style="width:70%; min-width: 350px" title="math in language models">
 						<p>Have you ever tried to do mathematics with pretrained language models? It turns out that even the most basic questions can be very challenging for them. Simple question requiring basic addition or other elementary operation can bamboozle an otherwise very well prepared model. (But don't trust us, <a href="https://transformer.huggingface.co/">try it yourself.</a>)<br \>
 							We would, however, expect such models to possess some mathematical abilities. As an example language model to investigate we choose BERT. We scrutinize it's mathematical abilities and suggest that self-supervised training on explanations of how the answer to given mathematical question was derived can improve mathematics in language models. We also suggest a new loss for utlization of the explanations.
 
-							As a benchmark for measuring mathematical skills we use AQuA-RAT. AQuA-RAT is a data set with math word problems in a form of a closed test. That is each data point consists of question, possible answer, and the information which answer is correct. What's specific to AQuA-RAT is that it is augmented by a rationale. An explanation of how the solution was derived. We use that for self-supervised training and <b>we don't use rationales for fine-tuning</b>.
+							As a benchmark for measuring mathematical skills we use AQuA-RAT. AQuA-RAT is a data set with math word problems in a form of a closed test. That is each data point consists of question, possible answer, and the information which answer is correct. What's specific to AQuA-RAT is that it is augmented by a rationale - an explanation of how the solution was derived. We use that for self-supervised training and <b>we don't use rationales for fine-tuning</b>.
+						</p>
+						<img src="images/aqua.gif" class="centered" style="max-width: 100%" title="aqua-rat">
+						<br \>
+						<p>We Hypothesize that we can improve mathematics in language models by additional training on rationales. They are a step-by-step derivation of the solution. Therefore, they might contain natural language, mix of natural language with formal mathematics, and purely formal expressions. Because of that model can learn to deal with mathematics in natural language environments.
+							We also suggest a novel loss that works on rationales - Neighbor Reasoning Order Prediction (NROP). It is a coherence loss that forces the model to focus more on the rationale. In NROP task the model has to predicted whether two randomly chosen neighboring rows have been swapped. For 50% of rows two neighbor rows are swapped and for 50% rationale stays as original. The model has to predict whether the swap occurred or not.
+							NROP loss is combined with standard MLM loss for self-supervised training.
+						</p>
+
+						<p>
+							Interestingly, for MLM loss, there are parallels between masking numbers and solving mathematical equations, where it can be seen as solving the equation with unknown.
+						</p>
+
+						<img src="images/NROP.gif" class="centered" style="max-width: 100%"  title="nrop">
+
+						<p>
+							We wanted to measure the impact of using rationales and how much our loss helps with the utilization. To measure that, we conducted four experiments:
+						<ul>
+						    <li><b>BERT-base</b>: Directly fine-tuned BERT to predict the correct answer.</li>
+						    <li><b>BERT-AQuA</b>: which is a BERT with additional MLM training only on questions.</li>
+						    <li><b>BERT-AQuA-RAT</b>: BERT with additional MLM training on questions combined with rationales.</li>
+						    <li><b>BERT-NROP</b>: BERT with both MLM and NROP with training on questions combined with rationales.</li>
+					    </ul>
+						In all our experiments, rationales were used only for additional self-supervised training. BERT with additional NROP training achieves state-of-the-art results across the models with low inductive biases and even on par with more tailored models.
+						the results also show that BERT-AQuA-RAT is better than BERT-AQuA, showing that rationales indeed improve the results and that NROP improves it even further.
 
 						</p>
-						<img src="images/aqua.gif" class="centered" title="aqua-rat">
-						<img src="images/NROP.gif" class="centered" title="nrop">
-						<img src="images/results.png" class="centered" title="results">
-						<img src="images/tsne.png" class="centered" title="tsne", style="width: 100%">
+
+						<img src="images/results.png" style="width: 30%;  min-width: 350px" class="centered" title="results">
+						<p>
+							You could, however, argue (and rightfully so) that the improvement in BERT-AQuA-RAT in comparison to BERT-AQuA doesn't necessarily have to be caused by some intrinsic quality of rationales for training. BERT-AQuA-RAT simply has access to more data than BERT-AQUA, because it has access to the same questions with with the addition of rationale.
+						</p>
+						<p>
+							We measured that question with rationale has around 3 times more tokens than just question alone. Therefore, in order to make a fair comparison between the two models we have to make samples with 3 times more rows for training without rationale than for training with rationale - that will create a similar number of tokens for self-supervised training in both scenarios.
+							We compared them in setups with increasing numbers of tokens available for pretraining and found that in this setup too rationales improve the results outperform BERT-AQuA showing that rationale tokens were utilized much better than question tokens, and that they indeed are qualitatively better for learning mathematical skills.
+						</p>
+						<img src="images/AQuA-vs-NROP.jpg" class="centered" style="width: 40%;  min-width: 350px" title="rationales", style="width: 100%">
+
+							<br \>
+							<br \>
+							<br \>
+						<div class="centered" style="align-content: center"><h2 class="centered" style="align-content: center">Embeddings</h2></div>
+						<p>
+							<br \>
+							After investigating the models further we found other observations. First of all, BERTs embeddings, even after fine-tuning to predict the correct answer, had no information about basic operators. Interestingly, BERT-NROP seems to retrieve some information about them.
+						</p>
+						<img src="images/tsne.png" style="width:100%" class="centered" title="tsne">
+						<p>
+							We wanted to look at specific examples of what questions does BERT solve and what he does not.
+							However, random guessing on AQuA-RAT yields 20% accuracy, which would make it hard to distinguish
+							solved questions from pure luck. With that in mind, we have constructed a new evaluation task -
+							the permutation consistency test. Each question is copied five times with the correct answer at
+							a different position. Model scores one point only if it solves all five questions.
+							Therefore the random chance in this experiment is lower than one-tenth of a percentile.
+							In this test, our model solved three times as many questions as BERT.
+						</p>
+						<img src="images/perm_def.png" style="width:47%;  min-width: 350px" class="centered" title="permutation consistency test definition">
+						<p>We found that in most of the questions solved by BERT answer was either round or in another way different than the other candidates. We did not find a similar pattern in questions solved by BERT-NROP.
+
+						<p>Results of the permutation consistency test suggest that models also rely strongly on the order of the answers. Names presented here are our models that rely on permutation invariant losses. Their goal is to increase the score on permutation invariant test while keeping original test score at a good level. You can find more details about them in the paper.</p>
+
+						<img src="images/perm_results.png" style="width:25%;  min-width: 350px" class="centered"  title="permutation consistency test results">
+
+						<p>  To better understand the models' performance, we check which questions are difficult for the model. We categorize questions by their difficulty for BERT-NROP and BERT. To estimate a question's difficulty, we have ranked the candidate answers according to the model's uncertainties. For instance, if the correct answer has the second-largest probability, we assign to that question difficulty two. With that method, we group questions into five difficulty categories.
+						Manual inspection shows that for BERT+NROP, these groups show somewhat expected patterns ranging from single operations to number theory problem or those that require additional knowledge.
+						We did not observe a similar pattern for BERT, except the easiest group, where the model chooses the answer that is somewhat different from the other candidates. </p>
+
+						<p>We confirmed this observation by conducting a human study. It is described in details in the paper.</p>
 					</section>
 
+
+				<section id="Publications">
+					<H1>Publications</H1>
+					This research was presented at the following conferences and workshops:
+					<ul>
+						<li>ACL-IJCNLP 2021 (oral)</li>
+						<li>MathAI 2021 (ICLR Workshop)</li>
+						<li>EEML 2021 (poster)</li>
+						<li>BayLearn 2020</li>
+					</ul>
+				</section>
 				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
 
 				<!-- Four -->
 				<!--
@@ -423,13 +459,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<div class="inner onlyphone">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/piotrpiekos/" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/piotrpiekos1/" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="mailto: piotrpiekos@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Background photo: <a href="http://unsplash.com">Unsplash</a></li>
 					</ul>
 				</div>
 			</footer>
