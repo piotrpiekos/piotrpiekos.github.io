@@ -1808,7 +1808,7 @@ input, select, textarea {
 	}
 
 	label {
-		color: #787878;
+		color: #282828;
 		display: block;
 		font-size: 0.9em;
 		font-weight: 400;
@@ -2250,7 +2250,7 @@ input, select, textarea {
 			}
 
 			ul.labeled-icons li h3 {
-				color: #b2b2b2;
+				color: #3d3d3d;
 				left: 0;
 				position: absolute;
 				text-align: center;
@@ -2623,11 +2623,11 @@ input, select, textarea {
 	}
 
 		    .hmain {
-				background-image: url("images/overlay.png"), url("../../images/tree.jpg");
+				/*background-image: url("images/overlay.png"), url("../../images/tree.jpg");*/
 
 				text-align: right;
-				width: 35%;
-				padding: 8em 4em;
+				width: 28%;
+				padding: 6em 4em;
 			}
 			.hblog {
 				text-align: center;
@@ -2663,7 +2663,7 @@ input, select, textarea {
 		}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: #606060;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2671,7 +2671,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(47, 47, 47, 0.5);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2679,24 +2679,39 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 8em;
 		}
 		#header .image.avatar-blog {
 			width: 4.25em;
 		}
 
 /* Footer */
+    .icons {
+		margin: 1em 0 0 0;
+	}
 
-	#footer .icons {
+		.icons a {
+			color: rgba(0, 0, 0, 0.4);
+		}
+
+	.copyright {
+		color: rgba(0, 0, 0, 0.4);
+		font-size: 0.8em;
+		list-style: none;
+		margin: 1em 0 0 0;
+		padding: 0;
+	}
+
+	.icons {
 		margin: 1em 0 0 0;
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(0, 0, 0, 0.4);
 		}
 
 	#footer .copyright {
-		color: rgba(255, 255, 255, 0.4);
+		color: rgba(0, 0, 0, 0.4);
 		font-size: 0.8em;
 		list-style: none;
 		margin: 1em 0 0 0;
@@ -2746,10 +2761,10 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		margin-left: 35%;
-		max-width: 54em;
+		margin-left: 28%;
+		max-width: 63em;
 		padding: 8em 4em 4em 4em;
-		width: calc(100% - 35%);
+		width: calc(100% - 28%);
 	}
 	.blogmain{
 		margin-left: 10% !important;
@@ -3069,7 +3084,7 @@ input, select, textarea {
 		    .hmain {
 
 				padding: 6em 3em 3em 3em;
-				background-image: url("images/overlay.png"), url("../../images/tree2.jpg");
+				/*background-image: url("images/overlay.png"), url("../../images/tree2.jpg")*/;
 				width: 30%;
 			}
 			.avatar-blog {
@@ -3147,7 +3162,7 @@ input, select, textarea {
 				display: block;
 			}
 		    .hmain {
-				background-image: url("images/overlay.png"), url("../../images/tree.jpg");
+				/*background-image: url("images/overlay.png"), url("../../images/tree.jpg");*/
 				padding: 1em 1em !important;
 			}
 
