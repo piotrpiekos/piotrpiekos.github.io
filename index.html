@@ -1,489 +1,357 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Piotr Piękos</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
-		<!-- Header -->
-			<header id="header" class="hmain">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/photo.jpg" alt="" /></a>
-					<h1><strong>Piotr Piękos</strong><br />
-					I am trying to <br />
-						make machines <br /> that think analytically
-					<!--responsive site template freebie<br />
-					crafted by <a href="http://html5up.net">HTML5 UP</a>.--></h1>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Piotr Piękos' website</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <!-- main style -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-				<ul class="icons" style="padding: 1em 0em;">
+<body>
 
-						<li><a href="https://twitter.com/piotrpiekosAI/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/piotrpiekos/" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/piotrpiekos1/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto: piotrpiekos@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
 
-				<ul>
-					<li><a href="#publications" style="font-weight: bold;">Publications</a></li>
-					<li><a href="#projects" style="font-weight: bold">Projects</a></li>
-					<li><a href="#news" style="font-weight: bold">News</a></li>
-					<li><a href="cv.pdf" style="font-weight: bold">CV</a></li>
-				</ul>
-					</div>
-			</header>
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
 
-		<!-- Main -->
-			<div id="main">
+        </div>
+    </div>
+    <!-- ./Preloader -->
+    
+    <!-- header -->
+    <header class="navbar-fixed-top">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">publications</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="cv.pdf">CV</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ./header -->
+    
+    <!-- home -->
+    <div class="section" id="home" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="disply-table">
+                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
+                    <h4>Piotr Piękos</h4>
+                    <h1>Deep Learning </br> PhD student</h1> </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./home -->
+    
+    <!-- about -->
+    <div class="section" id="about">
+        <div class="container">
+            <div class="col-md-6" data-aos="fade-up">
+                <h4>01</h4>
+                <h1 class="size-50"> About me</h1>
+                <div class="h-50"></div>
+                <p>I am a second year PhD student at <a href="https://cemse.kaust.edu.sa/ai">KAUST AI Initiative</a>, working with <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber</a>.
+                My work focuses on creating scalable methods that improve generalization and sample efficiency by utilizing compositionality. </p>
+                    <p>I believe that low sample-efficiency and weak generalization are the main contributing factors to (still relatively) low adaptation of AI.
+                        The holy grail of my research is to create a method that efficiently decomposes the problem into subproblems similarly to humans. </p>
+                <p>In practice, it means that I am mostly interested in analyzing and improving transformer architecture, LLMs and (hierarchical) reinforcement learning algorithms.</p>
+                <p>Before starting my PhD I worked for over 3 years as a ML/Research Engineer. </br> I studied simultaneously Mathematics (BSc+MSc) and Computer Science (BSc) at the University of Warsaw. I wrote my Master's thesis on <a href="https://bert-math.github.io/">improving BERT's mathematical skills</a> under the supervision of <a href="https://scholar.google.com/citations?user=IqJ3zskAAAAJ&hl=en">Mateusz Malinowski</a> and <a href="https://www.mimuw.edu.pl/~henrykm/resume.html">Henryk Michalewski</a> </p>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-6 about-img-div">
+                <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
+                <img src="img/about-img.jpg" width="250" class="img-responsive" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
+            </div>
+        </div>
+    </div>
+    <!-- ./about -->
+    <!-- Publications  -->
+    <div class="section" id="publications">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>02</h4>
+                <h1 class="size-50">Publications</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-12">
+                <ul>
+                    <a id="demobertmath" href="#bertmath">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <div class="publication-copy">
+                            <h3>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h3>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About me</h2>
-						</header>
-						<p>
-							 I am a PhD student at <a href="https://www.kaust.edu.sa/en">KAUST</a>, advised by <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber</a>, working on systematic generalization and reasoning. During my Masters at <a href="https://www.mimuw.edu.pl/en">University of Warsaw</a> I was advised by <a href="http://www.mateuszmalinowski.com/">Mateusz Malinowski</a> and <a href="https://www.mimuw.edu.pl/~henrykm/resume.html">Henryk Michalewski</a>. I also have experience developing machine learning models for some of the biggest polish companies.
-						<br />
-						<br/>
-							My main goal is to create a general architecture that is able to learn the underlying rules of the environment and generalize to new scenarios. Therefore, my work mostly focuses on transformers, recurrent neural networks, reinforcement learning and graph neural networks.
-					</section>
+                            <p class="publication-thumbnail">ACL 2021 (oral)</p>
+                            <p><strong>Piotr Piękos</strong>, Henryk Michalewski, Mateusz Malinowski</strong></p>
+                        </div>
+                    </li>
 
-				<!-- Two -->
-				<section id="publications">
-						<h2>Publications</h2>
-						<div class="row">
+                    </a>
+                    <a id="demoadasubs" href="#adasubs">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <div class="publication-copy">
 
-							<article class="col-12 work-item">
-								<!--<a href="measuring-and-improving.html" style="align-content:center;"><img src="images/thumbs/01.jpg" alt="" /></a>-->
-								<a href="http://bert-math.github.io"><img src="images/thumbs/measuring_and_improving.png" style="width:100%" alt="" /></a>
-								<a href="http://bert-math.github.io"><h2>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h2></a>
-								<h5>Piotr Piękos, Henryk Michalewski, Mateusz Malinowski.</h5>
-								<p style="color:red"> ACL-IJCNLP 2021</p>
-							</article>
-						</div>
-					</section>
-				<section id="projects">
-						<h2>Other non-commercial projects</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/google/trax" class="image fit thumb"><img src="images/thumbs/bert4trax.jpg" alt="" /></a>
-								<h3>BERT for trax</h3>
-								<p>Implemented BERT MLM layers along with preprocessing necessary for pretraining BERT for trax - Google's open source jax based library.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://www.facebook.com/TensorCell/" class="image fit thumb"><img src="images/thumbs/tc_road.jpg" alt="" /></a>
-								<h3>Optimization of the stop lights network - TensorCell</h3>
-								<p>I had a pleasure to work on a research project related to searching the optimal traffic light control with reinforcement learning with TensorCell group.</p>
-							</article>
-							<!--
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Premise selector for automated theorem prover</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Duelling Double DQN implementation in tensorflow</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							-->
-						</div>
-					</section>
+                            <h3>Fast and Precise: Adjusting Planning Horizon with
+Adaptive Subgoal Search</h3>
+                            <p class="publication-thumbnail">ICLR 2023 (Notable top 5%)</p>
+                            <p>Michał Zawalski, Michał Tyrolski, Konrad Czechowski, Tomasz Odrzygóźdź. Damian Stachura. <strong>Piotr Piękos</strong>, Yuhuai Wu, Łukasz Kuciński, Piotr Miłoś</p>
+                        </div>
+                    </li>
 
-				<section id="news">
-					<h2>News</h2>
-					<ul>
-						<li> 17.01.2022: I join the AWARElab at Polish Academy of Sciences to help with work on <a href="https://proceedings.neurips.cc/paper/2021/file/05d8cccb5f47e5072f0a05b5f514941a-Paper.pdf">Subgoal Search for Complex Reasoning Environments</a></li>
-						<li> 29.11.2021: Invited talk at the <a href="https://www.impan.pl/en/activities/seminars/reinforcement-learning">Polish Academy of Sciences RL seminar</a> on math word problems and our paper "Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning".</li>
-						<li> 14.10.2021: Defense of my Master's Thesis. Final grade: 5.</li>
-						<li> 11.10.2021: Joining Allegro.pl as a research engineer. I work on improving the neural reranking of the search engine.</li>
-						<li> 21.09.2021: <a href="https://www.yachay-scg.com/summer-school">Yachay Summer School 2021</a>, I was moderating the NLP reading group.</li>
-						<li> 01.08.2021: <a href="https://2021.aclweb.org/">ACL-IJCNLP 2021</a>, presenting our paper "Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning" </li>
-						<li> 07.07.2021: <a href="https://www.eeml.eu/home">EEML 2021</a>, best poster award for the "Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning". Also, a presentation on the NLP reading group.</li>
-					</ul>
-				</section>
+                    </a>
+                    <a href="https://arxiv.org/pdf/2305.17066.pdf">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <div class="publication-copy">
+                            <h3>Mindstorms in Natural Language-Based Societies of Mind</h3>
+                            <p>Mingchen Zhuge, Haozhe Liu, Francesco Faccio, Dylan R Ashley, Róbert Csordás, Anand Gopalakrishnan, Abdullah Hamdi, Hasan Abed Al Kader Hammoud, Vincent Herrmann, Kazuki Irie, Louis Kirsch, Bing Li, Guohao Li, Shuming Liu, Jinjie Mai, <strong>Piotr Piękos</strong>, Aditya Ramesh, Imanol Schlag, Weimin Shi, Aleksandar Stanić, Wenyi Wang, Yuhui Wang, Mengmeng Xu, Deng-Ping Fan, Bernard Ghanem, Jürgen Schmidhuber</p>
+                        </div>
+                    </li>
 
-				<!-- Three -->
-				<!--
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										1234 Somewhere Rd.<br />
-										Nashville, TN 00000<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										000-000-0000
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">hello@untitled.tld</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
--->
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+                </a>
+                </ul>
+                <br/>
+                3 other publications (of which 2 are first author publications) are currently submitted to blind peer review conferences.
+            </div>
+        </div>
+    </div>
+    <!-- ./experience -->
+    <!-- experience  -->
+    <div class="section" id="experience">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>02</h4>
+                <h1 class="size-50">Experience</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-12">
+                <ul class="timeline">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail">Sept 2022 - Present</p>
+                            <h3>PhD Student</h3>
+                            <h4>KAUST</h4>
+                            <p>Supervised by Prof. Jürgen Schmidhuber. I am working on generalization, sample efficiency in context of language processing and reinforcement learning.</p>
+                        </div>
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail">Jan 2022 - Jul 2022</p>
+                            <h3>Researcher</h3>
+                            <h4>AWARElab, IMPAN (Institue of Mathematics, Polish Academy of Sciences) </h4>
+                            <p>Working on <a href="https://sites.google.com/view/adaptivesubgoalsearch/">AdaSubS</a>. Implementing experiments on the sokoban environment </p>
+                        </div>
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail">Oct 2021 - Jan 2022</p>
+                            <h3>Research Engineer</h3>
+                            <h4>Allegro.PL</h4>
+                            <p>Research neural search methods for improving search recommendations on the <a href="https://allegro.pl">Allegro.pl</a> ("Polish Amazon") platform</p>
+                        </div>
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail"> May 2020 - Sept 2021</p>
+                            <h3>Working on Master thesis</h3>
+                            <p>After promising initial results I decided to focus fully on my Master's thesis, the effect of that is the <a href="https://bert-math.github.io">Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</a> paper. </p>
+                        </div>
+                    </li>
+                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                            <p class="timeline-event-thumbnail"> July 2017 - June 2020</p>
+                            <h3>ML/DL Engineer</h3>
+                            <h4>ITmagination</h4>
+                            <p>In ITmagination I created DL/ML solutions to help other companies. Example projects are: Object detection system for evaluating influencers, recommender system or a system to help with estimating staff needs in physical shops.</p>
+                        </div>
+                    </li>
+                </ul>
+                </br>
+                <a href="cv.pdf"><button id="cv" class="btn btn-glance">Download CV in a pdf version</button></a>
+            </div>
+        </div>
+    </div>
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+    
+    <!-- contact -->
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>04</h4>
+                <h1 class="size-50">Contact  Me</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+                <h3>Email</h3>
+                <p><strong>piotrpiekos@gmail.com</strong> </p>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+                <h3>Social</h3>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
+                <ul class="social">
+                    <li><a href="https://scholar.google.com/citations?user=XkmDf7gAAAAJ&hl=pl&oi=ao"><img src="img/scholar.png" width="40px"/></a></li>
+                    <li><a href="https://github.com/piotrpiekos"><i class="ion-social-github"></i></a> </li>
+                    <li><a href="https://twitter.com/PiotrPiekosAI"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/cruelpython/"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/piotrpiekos1/"><i class="ion-social-linkedin"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-8" data-aos="fade-up">
+                <form class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
+                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
+                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
+                    <button id="submit" type="submit" name="submit" class="btn btn-glance">Send</button>
+                    <div id="success">
+                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I can. </p>
+                    </div>
+                    <div id="error">
+                        <p> Something went wrong, try refreshing and submitting the form again. </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./contact -->
 
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+    <!--DEMO01-->
+    <div id="animatedModal" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Geschäfts Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>testest set seet set</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--DEMO01-->
+    <div id="bertmath" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal2" class="close-bertmath close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h2>
+                        <h4>Piotr Piękos, Henryk Michalewski Mateusz Malinowski</h4>
+                        <br />
+                        <br /> <div style="text-align: center"><img src="img/portfolio/NROP.gif" alt=""
+  width="60%" class="img-responsive img-centered"/></div>
+                        <br />
+                        <br />
+                        <p>Before the rise of chain-of-thought prompting in LLMs and following papers we investigated the impact of the rationales on the reasoning and demonstrated that it can be useful to improve reasoning. We design specific losses that can help model improve coherence when trained on rationales. We also found that our method not only improves the raw accuracy score
+                            on mathematical tasks, but also makes the model more reliable. </p>
+                            <p>Our method is completely data-driven, and therefore easily can be used to improve any general purpose language model with a dataset of rationales.</p>
+                        <p>More details, link to the paper and as video describing the project can be found on <a href="https://bert-math.github.io"><strong>https://bert-math.github.io</strong></a></p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           <!--DEMO01-->
+    <div id="adasubs" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal3" class="close-adasubs close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Fast and Precise: Adjusting Planning Horizon with
+Adaptive Subgoal Search</h2>
+                        <h4>Michał Zawalski, Michał Tyrolski, Konrad Czechowski, Tomasz Odrzygóźdź, Damian Stachura, Piotr Piękos, Yuhuai Wu, Łukasz Kuciński, Piotr Miłoś</h4>
+                        <br />
+                         <p> In rich environments, some decisions need to be carefully thought through before making the decision, whereas for some it is easy to predict a state that's far away which we want to achieve. We utilize this fact in the context of hierarchical reinforcement learning and design an algorithm that adaptively selects horizon for choosing the next subgoal (state to reach) planning.
+                        <br />
+                        <br /> <img src="img/portfolio/adasubs.png" alt="" width="100%" class="img-responsive img-centered" />
+                       </p>
+                            <p>Our algorithm proves to operates significantly better than baselines, when compared on the same budget. Moreover, the algorithm demonstrates much better out of distribution generalization on INT environment, where it has to prove mathematical inequalities. </p>
+                        <p>More details can be found on the <a href="https://sites.google.com/view/adaptivesubgoalsearch/"><strong>project website</strong></a> </p>
+                        <br />
+                        <p>Project due to its success has also appeared in several polish popular news services, for example: <ul>
+                        <li><a href="https://biznes.interia.pl/gospodarka/news-polscy-naukowcy-zbudowali-algorytm-rozklada-problemy-na-czyn,nId,6703845"><strong>interia.pl</strong></a></li>
+                        <li><a href="https://naukawpolsce.pl/aktualnosci/news%2C95917%2Cjak-efektywnie-podzielic-droge-do-celu-algorytm-ai-polakow-wsrod-najlepszych"><strong>naukawpolsce.pl</strong></a></li>
+                        <li><a href="https://www.pcworld.pl/news/Polacy-zajeli-sie-AI-Czego-ja-nauczyli,444870.html"><strong>pcworld.pl</strong></a></li>
+                        </ul>
+                        </p>
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           <!--DEMO01-->
+    <div id="som" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal4" class="close-som close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Geschäfts Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>bertmath bertmath</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--  plugins  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+    <!--  main script  -->
+    <script src="js/custom.js"></script>
+</body>
 
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-
-			</div>
-		-->
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="copyright">
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
