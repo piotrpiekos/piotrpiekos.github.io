@@ -280,11 +280,23 @@ a.active {
 
 /* home section
 ==================================================*/
-
 #home {
-    background: url(../img/home-bg-2.webp);
-    background-size: cover;
-    height: 100vh;
+        background-color: white;
+        background-size: cover;
+        height: 100vh;
+}
+
+@media screen and (min-width:1000px) {
+    #home {
+        background: url(../img/home-bg-2.webp);
+        background-size: cover;
+        height: 100vh;
+    }
+}
+#home {
+        background-color: white;
+        background-size: cover;
+        height: 100vh;
 }
 
 .table-cell {
@@ -318,6 +330,12 @@ a.active {
     top: -30px;
     left: 140px;
     z-index: 1
+}
+
+@media screen and (max-width:1000px){
+    .nophone {
+        display: none;
+    }
 }
 
 
@@ -418,8 +436,21 @@ a.active {
 .publication-copy {
     padding: 0em;
     position: relative;
-    left: 4em;
+    left: 0em;
     width: 100%;
+}
+
+.publication-list {
+    margin: 2em;
+   padding: 0;
+}
+
+@media screen and (max-width:1000px) {
+    .publication-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .timeline-event-copy h3 {
