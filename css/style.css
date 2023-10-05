@@ -453,6 +453,12 @@ a.active {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .topmenu {
+        font-size: 7px;
+    }
+}
+
 .timeline-event-copy h3 {
     font-size: 1.75em;
 }
