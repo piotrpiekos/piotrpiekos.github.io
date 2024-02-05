@@ -410,6 +410,14 @@ a.active {
     box-shadow: inset 40em 0 0 0 #ff5454;
 }
 
+.timeline-event:hover .midtier-publication-thumbnail {
+    box-shadow: inset 40em 0 0 0 #ffaa54;
+}
+
+.timeline-event:hover .lowtier-publication-thumbnail {
+    box-shadow: inset 40em 0 0 0 #72c228;
+}
+
 .timeline-event-copy {
     padding: 2em;
     position: relative;
@@ -521,12 +529,47 @@ a.active {
     color: white;
     font-size: 12px;
     font-weight: bold;
-    background-color: #a80000;
+    background-color: #cc0000;
     box-shadow: inset 0 0 0 0em rgba(255, 247, 175, 0.24);
     display: inline-block;
 
     padding: 0.25em 1em 0.2em 1em;
 }
+
+.midtier-publication-thumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #c07b1e;
+    box-shadow: inset 0 0 0 0em rgba(255, 247, 175, 0.24);
+    display: inline-block;
+
+    padding: 0.25em 1em 0.2em 1em;
+}
+
+.lowtier-publication-thumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #34980b;
+    box-shadow: inset 0 0 0 0em rgba(255, 247, 175, 0.24);
+    display: inline-block;
+
+    padding: 0.25em 1em 0.2em 1em;
+}
+
 
 
 /* projects section
