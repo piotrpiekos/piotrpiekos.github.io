@@ -20,6 +20,9 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -54,9 +57,31 @@
         <div class="container">
             <div class="disply-table">
                 <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
-                    <h4>Piotr Piękos</h4>
-                    <h1>Deep Learning </br> PhD Student</h1> </div>
+                    <!-- desktop titles (unchanged) -->
+                    <h4 class="title-desktop">Piotr Piękos</h4>
+                    <h1 class="tagline-desktop">Deep Learning <br> PhD Candidate</h1>
+                  
+                    <!-- mobile-only name above the photo -->
+                    <h1 class="title-mobile">Piotr Piękos</h1>
+                  
+                    <!-- your face -->
+                    <img src="img/round_photo.png" alt="Piotr Piękos" class="home-face">
+                  
+                    <!-- mobile-only tagline below the photo -->
+                    <h2 class="tagline-mobile">Deep Learning <br> PhD Candidate</h2>
+                </div>
+                <!-- <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
+                    
+
+                    
+                    
+                    <h4 class="title-desktop">Piotr Piękos</h4>
+                    
+                    <h1 class="title-mobile">Piotr Piękos</h1>
+                    <h1>Deep Learning </br> PhD Candidate</h1> 
+                </div> -->
             </div>
+        <!-- <img src="img/round_photo.png" alt="Piotr Piękos" class="home-face"> -->
         </div>
     </div>
     <!-- ./home -->
@@ -65,16 +90,14 @@
     <div class="section" id="about">
         <div class="container">
             <div class="col-md-6" data-aos="fade-up">
-                <h4>01</h4>
                 <h1 class="size-50"> About me</h1>
                 <div class="h-50"></div>
-                <p>I am a 3rd year PhD Student at <a href="https://cemse.kaust.edu.sa/ai">KAUST AI Initiative</a>, supervised by <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber </a>. I am interested in reasoning in neural networks. In practice, it means that I mostly work on analyzing and improving transformer architecture, LLMs and (goal-conditioned / hierarchical) reinforcement learning algorithms.</p>
+                <p>I am a 3rd year PhD Candidate at <a href="https://cemse.kaust.edu.sa/ai">KAUST AI Initiative</a>, supervised by Prof. <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber </a>. I am interested in reasoning in neural networks. In practice, it means that I mostly work on analyzing and improving transformer architecture, LLMs and (goal-conditioned / hierarchical) reinforcement learning algorithms.</p>
                 <p>I have 4 years of industry experience. Apart from my 2024 <b>Amazon</b> research internship, I worked for over 3 years as a Deep Learning engineer before starting my PhD. During that time I worked with some of the biggest Polish companies like Allegro, LPP or AmRest.</p>
 
                 <p>I studied simultaneously Mathematics (BSc+MSc) and Computer Science (BSc) at the University of Warsaw. I wrote my Master's thesis on <a href="https://bert-math.github.io/">improving BERT's mathematical skills</a> under the supervision of <a href="https://scholar.google.com/citations?user=IqJ3zskAAAAJ&hl=en">Mateusz Malinowski</a> and <a href="https://www.mimuw.edu.pl/~henrykm/resume.html">Henryk Michalewski</a> </p>
-                <p>Apart from deep learning I enjoy bicycle trips, playing chess and playing some instruments (I play guitar and I am started learning to play the piano). </p>
+                <p>Apart from deep learning I enjoy bicycle trips, playing chess and playing some instruments (I play guitar and I have started learning to play the piano). </p>
 
-                <p>Don't hesitate to contact me if you have questions about my work, want to chat about research overall or just want to play a chess game!</p>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-6 about-img-div  nophone">
@@ -88,74 +111,80 @@
     <div class="section" id="publications">
         <div class="container">
             <div class="col-md-12">
-                <h4>02</h4>
                 <h1 class="size-50">Publications</h1>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-12">
                 <ul class="publication-list">
-                    <a href="https://openreview.net/pdf?id=UyNjQ3UKO2">
-                    <li class="timeline-event" data-aos="fade-up">
-                        <div class="publication-copy">
-                            <h3>Efficient Value Propagation with the Compositional Optimality Equation</h3>
-
-                            <p class="lowtier-publication-thumbnail">GCRL NeurIPS 2023 Workshop</p>
-                            <p><strong>Piotr Piękos</strong>, Aditya Ramesh, Francesco Faccio, Jürgen Schmidhuber</p>
-                        </div>
-                    </li>
-                    </a>
 
 
                     <a href="https://arxiv.org/pdf/2312.07987.pdf">
                     <li class="timeline-event" data-aos="fade-up">
                         <div class="publication-copy">
                             <h3>SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention</h3>
+                            <p class="publication-thumbnail">NeurIPS 2024</p>
                             <p>Robert Csordás, <strong>Piotr Piękos</strong>, Kazuki Irie, Jürgen Schmidhuber </p>
                         </div>
                     </li>
                     </a>
-                    <a href="#">
+                    <a href="https://ieeexplore.ieee.org/document/10611304">
                     <li class="timeline-event" data-aos="fade-up">
                         <div class="publication-copy">
                             <h3>Utilizing a Malfunctioning 3D Printer by Modeling Its Dynamics with Artificial Intelligence</h3>
 
-                            <p class="midtier-publication-thumbnail">ICRA 2024</p>
+                            <p class="publication-thumbnail">ICRA 2024</p>
                             <p> Renzo Cabalero<sup>*</sup>, <strong>Piotr Piękos<sup>*</sup></strong>, Eric Feron, Jürgen Schmidhuber</p>
                             <p>* - equal contribution</p>
                         </div>
                     </li>
                     </a>
-                    <a id="demobertmath" href="#bertmath">
-                    <li class="timeline-event" data-aos="fade-up">
-                        <div class="publication-copy">
-                            <h3>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h3>
 
-                            <p class="publication-thumbnail">ACL 2021 (oral)</p>
-                            <p><strong>Piotr Piękos</strong>, Henryk Michalewski, Mateusz Malinowski</p>
-                        </div>
-                    </li>
+                    
+                </a>
+                <a href="https://arxiv.org/pdf/2305.17066.pdf">
+                <li class="timeline-event" data-aos="fade-up">
+                    <div class="publication-copy">
+                        <h3>Mindstorms in Natural Language-Based Societies of Mind</h3>
+                        <p class="publication-thumbnail">CVMJ 2025</p>
+                        <!-- <p class="publication-thumbnail">R0-FoMo NeurIPS 2023 Workshop (Best Paper Award)</p> -->
+                        <p>Mingchen Zhuge, Haozhe Liu, Francesco Faccio, Dylan R Ashley, Róbert Csordás, Anand Gopalakrishnan, Abdullah Hamdi, Hasan Abed Al Kader Hammoud, Vincent Herrmann, Kazuki Irie, Louis Kirsch, Bing Li, Guohao Li, Shuming Liu, Jinjie Mai, <strong>Piotr Piękos</strong>, Aditya Ramesh, Imanol Schlag, Weimin Shi, Aleksandar Stanić, Wenyi Wang, Yuhui Wang, Mengmeng Xu, Deng-Ping Fan, Bernard Ghanem, Jürgen Schmidhuber</p>
+                    </div>
+                </li>
 
-                    </a>
-                    <a id="demoadasubs" href="#adasubs">
+                <a id="demoadasubs" href="#adasubs">
                     <li class="timeline-event" data-aos="fade-up">
                         <div class="publication-copy">
 
                             <h3>Fast and Precise: Adjusting Planning Horizon with
 Adaptive Subgoal Search</h3>
-                            <p class="publication-thumbnail">ICLR 2023 Oral (Notable top 5%)</p>
+                            <p class="publication-thumbnail">ICLR 2023 (Oral - Notable top 5%)</p>
                             <p>Michał Zawalski, Michał Tyrolski, Konrad Czechowski, Tomasz Odrzygóźdź. Damian Stachura. <strong>Piotr Piękos</strong>, Yuhuai Wu, Łukasz Kuciński, Piotr Miłoś</p>
+                        </div>
+                    </li>
+                </a>
+                </a>
+
+                    <a id="demobertmath" href="#bertmath">
+                    <li class="timeline-event" data-aos="fade-up">
+                        <div class="publication-copy">
+                            <h3>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h3>
+
+                            <p class="publication-thumbnail">ACL 2021 (Oral)</p>
+                            <p><strong>Piotr Piękos</strong>, Henryk Michalewski, Mateusz Malinowski</p>
                         </div>
                     </li>
 
                     </a>
-                    <a href="https://arxiv.org/pdf/2305.17066.pdf">
-                    <li class="timeline-event" data-aos="fade-up">
-                        <div class="publication-copy">
-                            <h3>Mindstorms in Natural Language-Based Societies of Mind</h3>
-                            <p class="midtier-publication-thumbnail">R0-FoMo NeurIPS 2023 Workshop (Best Paper Award)</p>
-                            <p>Mingchen Zhuge, Haozhe Liu, Francesco Faccio, Dylan R Ashley, Róbert Csordás, Anand Gopalakrishnan, Abdullah Hamdi, Hasan Abed Al Kader Hammoud, Vincent Herrmann, Kazuki Irie, Louis Kirsch, Bing Li, Guohao Li, Shuming Liu, Jinjie Mai, <strong>Piotr Piękos</strong>, Aditya Ramesh, Imanol Schlag, Weimin Shi, Aleksandar Stanić, Wenyi Wang, Yuhui Wang, Mengmeng Xu, Deng-Ping Fan, Bernard Ghanem, Jürgen Schmidhuber</p>
-                        </div>
-                    </li>
+                    
+                    <a href="https://openreview.net/pdf?id=UyNjQ3UKO2">
+                        <li class="timeline-event" data-aos="fade-up">
+                            <div class="publication-copy">
+                                <h3>Efficient Value Propagation with the Compositional Optimality Equation</h3>
+    
+                                <p class="publication-thumbnail">GCRL NeurIPS 2023 Workshop</p>
+                                <p><strong>Piotr Piękos</strong>, Aditya Ramesh, Francesco Faccio, Jürgen Schmidhuber</p>
+                            </div>
+                        </li>
                     </a>
                 </ul>
                 <br/>
@@ -167,7 +196,6 @@ Adaptive Subgoal Search</h3>
     <div class="section" id="experience">
         <div class="container">
             <div class="col-md-12">
-                <h4>02</h4>
                 <h1 class="size-50">Experience</h1>
                 <div class="h-50"></div>
             </div>
@@ -217,15 +245,7 @@ Adaptive Subgoal Search</h3>
                             <p class="timeline-event-thumbnail">Oct 2021 - Jan 2022</p>
                             <h3>Allegro.PL</h3>
                             <h4>Research Engineer</h4>
-                            <p>Researching neural search methods for improving search recommendations on the <a href="https://allegro.pl">Allegro.pl</a> ("Polish Amazon") platform</p>
-                        </div>
-                    </li>
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail"> May 2020 - Sept 2021</p>
-                            <h3>Working on Master thesis</h3>
-                            <p>After promising initial results I decided to focus fully on my Master's thesis, the effect of that is the <a href="https://bert-math.github.io">Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</a> paper. </p>
+                            <p>Researching neural search methods for improving search recommendations on the <a href="https://allegro.pl">Allegro.pl</a> platform</p>
                         </div>
                     </li>
                     <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
@@ -239,32 +259,51 @@ Adaptive Subgoal Search</h3>
                     </li>
                 </ul>
                 </br>
-                <a href="cv.pdf"><button id="cv" class="btn btn-glance">Download CV in a pdf format</button></a>
             </div>
         </div>
     </div>
 
     
+    <div class="section" id="awards">
+
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="size-50">Awards</h1>
+                <div class="h-50"></div>
+            </div>
+            <ul>
+                <li>EEML 2021 Summer School - Best Poster Award</li>
+                <li>R0-FoMo NeurIPS 2023 Workshop - Best Paper Award</li>
+            </ul>
+        
+        
+        </div>
+    </div>
+
+    <div class="section"  id="cv_box">
+        <div class="container">
+            <a href="cv.pdf"><button id="cv" class="btn btn-glance">Download CV in a pdf format</button></a>
+        </div>
+    </div>
+
     <!-- contact -->
     <div class="section" id="contact">
         <div class="container">
             <div class="col-md-12">
-                <h4>04</h4>
-                <h1 class="size-50">Contact  Me</h1>
+                <h1 class="size-50">Contact Me</h1>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-4" data-aos="fade-up">
                 <h3>Email</h3>
-                <p><strong>piotrpiekos@gmail.com</strong> </p>
+                <p><strong>piotr.piekos@kaust.edu.sa</strong> </p>
 
                 <h3>Social</h3>
 
                 <ul class="social">
                     <li><a href="https://scholar.google.com/citations?user=XkmDf7gAAAAJ&hl=pl&oi=ao"><img src="img/scholar.png" width="40px"/></a></li>
                     <li><a href="https://github.com/piotrpiekos"><i class="ion-social-github"></i></a> </li>
-                    <li><a href="https://twitter.com/PiotrPiekosAI"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/cruelpython/"><i class="ion-social-instagram"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/piotrpiekos1/"><i class="ion-social-linkedin"></i></a></li>
+                    <li><a href="https://x.com/PiotrPiekosAI"><i class="ion-social-twitter"></i></a></li>
                 </ul>
                 <div class="clearfix"></div>
                 <div class="h-50"></div>
