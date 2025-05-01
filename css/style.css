@@ -255,8 +255,8 @@ nav li a {
 }
 
 .bg-nav {
-    background: #fff;
-    border-bottom: 1px solid #f3f3f3
+    background: #f3f3f3;
+    border-bottom: 1px solid #e2e2e2
 }
 
 .bg-nav ul {
@@ -311,6 +311,7 @@ a.active {
 
 #about {
     padding: 100px 0;
+    background: #f3f3f3
 }
 
 .about-img-div img {
@@ -340,20 +341,20 @@ a.active {
 
 #experience {
     padding: 50px 0;
-    background: #ffffff
+    background: #f3f3f3
 }
 #publications {
     padding: 50px 0;
-    background: #f3f3f3
+    background: #ffffff
 }
 #awards {
     padding: 50px 0;
-    background: #f3f3f3;
+    background: #ffffff;
     font-size: 16px;
 }
 #cv_box {
     padding: 0px 0;
-    background: #f3f3f3
+    background: #ffffff;
 }
 
 .experience-row {
@@ -553,13 +554,18 @@ a.active {
     box-shadow: inset 0 0 0 0em rgba(255, 247, 175, 0.24);
     display: inline-block;
 
-    width:              400px;          /* choose your thumbnail width */
+    width:              350px;          /* choose your thumbnail width */
     /*height:             20px;          /* fixed height for all */
     overflow:           hidden;         /* hide anything beyond 100px */
     vertical-align:     top;   
 
     padding: 0.25em 1em 0.2em 1em;
 }
+
+.publication-image {
+    width: 500px;
+    object-fit: scale-down    /* crop to fill */
+  }
 
 /*.lowtier-publication-thumbnail {
     /* your existing transitions, colors, padding… */
@@ -787,7 +793,8 @@ a.active {
 
 #contact {
     padding: 50px 0;
-    background: #f3f3f3
+    background: #ffffff;
+    /* background: #f3f3f3 */
 }
 
 #contact-form input,
@@ -1192,4 +1199,32 @@ fieldset {
       font-size: 3rem !important;
     }
   }
+}
+
+.timeline-event .publication-entry {
+    display: flex;
+    flex-direction: row;       /* ensure it’s a row, not column */
+    align-items: flex-start;   /* align their top edges */
+    gap: 20px;                 /* space between text and image */
+  }
   
+  /* 2) Let the text grow, pushing image to the right */
+  .timeline-event .publication-entry .publication-copy {
+    flex: 1;
+  }
+  
+  /* 3) Fix the image size */
+  .timeline-event .publication-entry .publication-image {
+    flex-shrink: 0;            /* never shrink */
+    width: 400px;              /* pick your desired width */
+    height: auto;
+    object-fit: cover;
+    padding-top: 10px;
+    border-radius: 4px;        /* optional styling */
+  }
+
+  @media screen and (max-width: 768px) {
+    .publication-image {
+      display: none !important;
+    }
+  }

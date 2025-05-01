@@ -92,11 +92,11 @@
             <div class="col-md-6" data-aos="fade-up">
                 <h1 class="size-50"> About me</h1>
                 <div class="h-50"></div>
-                <p>I am a 3rd year PhD Candidate at <a href="https://cemse.kaust.edu.sa/ai">KAUST AI Initiative</a>, supervised by Prof. <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber </a>. I am interested in reasoning in neural networks. In practice, it means that I mostly work on analyzing and improving transformer architecture, LLMs and (goal-conditioned / hierarchical) reinforcement learning algorithms.</p>
+                <p>I am a 3rd year PhD Candidate at <a href="https://cemse.kaust.edu.sa/ai">KAUST AI Initiative</a>, supervised by Prof. <a href="https://people.idsia.ch/~juergen/">Jürgen Schmidhuber </a>. I am interested in scalable architectures that improve reasoning in neural networks. In practice, it means that I mostly work on Mixture-of-Experts, analyzing and improving transformer architecture, LLMs and (goal-conditioned / hierarchical) reinforcement learning algorithms.</p>
                 <p>I have 4 years of industry experience. Apart from my 2024 <b>Amazon</b> research internship, I worked for over 3 years as a Deep Learning engineer before starting my PhD. During that time I worked with some of the biggest Polish companies like Allegro, LPP or AmRest.</p>
 
                 <p>I studied simultaneously Mathematics (BSc+MSc) and Computer Science (BSc) at the University of Warsaw. I wrote my Master's thesis on <a href="https://bert-math.github.io/">improving BERT's mathematical skills</a> under the supervision of <a href="https://scholar.google.com/citations?user=IqJ3zskAAAAJ&hl=en">Mateusz Malinowski</a> and <a href="https://www.mimuw.edu.pl/~henrykm/resume.html">Henryk Michalewski</a> </p>
-                <p>Apart from deep learning I enjoy bicycle trips, playing chess and playing some instruments (I play guitar and I have started learning to play the piano). </p>
+                <p>Apart from deep learning, I enjoy bicycle trips, playing chess, and playing some instruments: I play guitar, and I have started learning to play the piano. </p>
 
                 <div class="h-50"></div>
             </div>
@@ -115,20 +115,36 @@
                 <div class="h-50"></div>
             </div>
             <div class="col-md-12">
-                <ul class="publication-list">
-
+                    <ul class="publication-list">
+                        <li class="timeline-event" data-aos="fade-up">
+                            <a href="#">
+                              <div class="publication-entry">
+                                <div class="publication-copy">
+                                  <h3>Mixture of Sparse Attention: Content-Based Learnable Sparse Attention via Expert-Choice Routing</h3>
+                                  <p><strong>Piotr Piękos</strong>, Róbert Csordás, Jürgen Schmidhuber</p>
+                                </div>
+                                <img class="publication-image" src="img/pubs/mosa.png" alt="Paper thumbnail">
+                              </div>
+                            </a>
+                          </li>
 
                     <a href="https://arxiv.org/pdf/2312.07987.pdf">
                     <li class="timeline-event" data-aos="fade-up">
-                        <div class="publication-copy">
-                            <h3>SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention</h3>
-                            <p class="publication-thumbnail">NeurIPS 2024</p>
-                            <p>Robert Csordás, <strong>Piotr Piękos</strong>, Kazuki Irie, Jürgen Schmidhuber </p>
+
+                        <div class="publication-entry">
+                            <div class="publication-copy">
+                                <h3>SwitchHead: Accelerating Transformers with Mixture-of-Experts Attention</h3>
+                                <p class="publication-thumbnail">NeurIPS 2024</p>
+                                <p>Róbert Csordás, <strong>Piotr Piękos</strong>, Kazuki Irie, Jürgen Schmidhuber </p>
+                            </div>
+                            <img class="publication-image" src="img/pubs/switchhead.png" alt="Paper thumbnail">
                         </div>
+
                     </li>
                     </a>
                     <a href="https://ieeexplore.ieee.org/document/10611304">
                     <li class="timeline-event" data-aos="fade-up">
+                    <div class="publication-entry">
                         <div class="publication-copy">
                             <h3>Utilizing a Malfunctioning 3D Printer by Modeling Its Dynamics with Artificial Intelligence</h3>
 
@@ -136,6 +152,8 @@
                             <p> Renzo Cabalero<sup>*</sup>, <strong>Piotr Piękos<sup>*</sup></strong>, Eric Feron, Jürgen Schmidhuber</p>
                             <p>* - equal contribution</p>
                         </div>
+                        <img class="publication-image" src="img/pubs/adaptive-printer.png" alt="Paper thumbnail">
+                    </div>
                     </li>
                     </a>
 
@@ -143,16 +161,20 @@
                 </a>
                 <a href="https://arxiv.org/pdf/2305.17066.pdf">
                 <li class="timeline-event" data-aos="fade-up">
+                <div class="publication-entry">
                     <div class="publication-copy">
                         <h3>Mindstorms in Natural Language-Based Societies of Mind</h3>
                         <p class="publication-thumbnail">CVMJ 2025</p>
                         <!-- <p class="publication-thumbnail">R0-FoMo NeurIPS 2023 Workshop (Best Paper Award)</p> -->
                         <p>Mingchen Zhuge, Haozhe Liu, Francesco Faccio, Dylan R Ashley, Róbert Csordás, Anand Gopalakrishnan, Abdullah Hamdi, Hasan Abed Al Kader Hammoud, Vincent Herrmann, Kazuki Irie, Louis Kirsch, Bing Li, Guohao Li, Shuming Liu, Jinjie Mai, <strong>Piotr Piękos</strong>, Aditya Ramesh, Imanol Schlag, Weimin Shi, Aleksandar Stanić, Wenyi Wang, Yuhui Wang, Mengmeng Xu, Deng-Ping Fan, Bernard Ghanem, Jürgen Schmidhuber</p>
                     </div>
+                    <img class="publication-image" src="img/pubs/nlsom.png" alt="Paper thumbnail">
+                </div>
                 </li>
 
                 <a id="demoadasubs" href="#adasubs">
                     <li class="timeline-event" data-aos="fade-up">
+                    <div class="publication-entry">
                         <div class="publication-copy">
 
                             <h3>Fast and Precise: Adjusting Planning Horizon with
@@ -160,30 +182,39 @@ Adaptive Subgoal Search</h3>
                             <p class="publication-thumbnail">ICLR 2023 (Oral - Notable top 5%)</p>
                             <p>Michał Zawalski, Michał Tyrolski, Konrad Czechowski, Tomasz Odrzygóźdź. Damian Stachura. <strong>Piotr Piękos</strong>, Yuhuai Wu, Łukasz Kuciński, Piotr Miłoś</p>
                         </div>
+
+                    <img class="publication-image" src="img/pubs/adasubs.png" alt="Paper thumbnail">
+                    </div>
                     </li>
                 </a>
                 </a>
 
                     <a id="demobertmath" href="#bertmath">
                     <li class="timeline-event" data-aos="fade-up">
+                        <div class="publication-entry">
                         <div class="publication-copy">
                             <h3>Measuring and Improving BERT's Mathematical Abilities by Predicting the Order of Reasoning</h3>
 
                             <p class="publication-thumbnail">ACL 2021 (Oral)</p>
                             <p><strong>Piotr Piękos</strong>, Henryk Michalewski, Mateusz Malinowski</p>
                         </div>
+                        <img class="publication-image" src="img/pubs/nrop.png" alt="Paper thumbnail">
+                    </div>
                     </li>
 
                     </a>
                     
                     <a href="https://openreview.net/pdf?id=UyNjQ3UKO2">
                         <li class="timeline-event" data-aos="fade-up">
+                            <div class="publication-entry">
                             <div class="publication-copy">
                                 <h3>Efficient Value Propagation with the Compositional Optimality Equation</h3>
     
                                 <p class="publication-thumbnail">GCRL NeurIPS 2023 Workshop</p>
                                 <p><strong>Piotr Piękos</strong>, Aditya Ramesh, Francesco Faccio, Jürgen Schmidhuber</p>
                             </div>
+                            <img class="publication-image" src="img/pubs/COE.png" alt="Paper thumbnail">
+                        </div>
                         </li>
                     </a>
                 </ul>
@@ -234,7 +265,7 @@ Adaptive Subgoal Search</h3>
                         <label class="timeline-event-icon"></label>
                         <div class="timeline-event-copy">
                             <p class="timeline-event-thumbnail">Jan 2022 - Jul 2022</p>
-                            <h3>AWARElab, IMPAN (Institue of Mathematics, Polish Academy of Sciences) </h3>
+                            <h3>AWARElab, IMPAN (Institute of Mathematics, Polish Academy of Sciences) </h3>
                             <h4>Researcher</h4>
                             <p>Working on <a href="https://sites.google.com/view/adaptivesubgoalsearch/">AdaSubS</a>. Implementing experiments on the sokoban environment </p>
                         </div>
