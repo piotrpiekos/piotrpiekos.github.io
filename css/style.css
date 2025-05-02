@@ -1228,3 +1228,48 @@ fieldset {
       display: none !important;
     }
   }
+
+  /* hide on desktop */
+.underline-mobile,
+.subtagline-mobile {
+  display: none;
+}
+@media (min-width: 769px){
+    .social-top {
+        display: none;
+    }
+}
+
+/* mobile-only styles */
+@media (max-width: 768px) {
+  .underline-mobile {
+    display: block;
+    width: 120px;             /* adjust length */
+    margin: 0.5em auto;      /* space above/below, centered */
+    border: none;
+    border-top: 1px solid #fff;
+  }
+  .subtagline-mobile {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;         /* adjust size */
+    color: #fff;
+    margin-top: 0.5em;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+  /* only affect icons inside .social-icons */
+.social-icons a {
+    display: inline-block;
+  }
+  
+  /* ionicons are text-based, so just set color */
+  .social-icons i {
+    color: #fff;
+    /* font-size: 1.5em;   adjust if needed */
+  }
+  
+  /* turn the black PNG into white */
+  .social-icons img {
+    filter: invert(1);
+  }
+}
