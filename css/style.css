@@ -787,6 +787,34 @@ a.active {
     line-height: 50px;
 }
 
+/* make them touch */
+.publication-entry-thumbnail {
+    display: inline-flex;      /* no whitespace gap between items */
+    align-items: center;
+  }
+  
+  /* override the old inline-block just when inside the entry */
+  .publication-entry .publication-thumbnail {
+    display: block;            /* kill inline-block gap behavior */
+    margin: 0;                 /* p has default margins */
+    border-radius: 4px 0 0 4px;/* outside corners only */
+  }
+
+  
+  .publication-thumbnail {
+    padding: 4px 8px;
+    border-radius: 4px 0 0 4px; /* round left side only */
+  }
+  
+  .oral {
+    background-color: rgba(254, 203, 0, 0.939);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2m;
+    padding: 4px 20px;
+    border-radius: 0 7px 7px 0; /* round right side only */
+    white-space: nowrap;
+  }
 
 /* contact
 ==================================================*/
@@ -813,6 +841,40 @@ a.active {
     line-height: 1.3rem;
     color: #000;
 }
+
+
+.award-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 4em;
+  }
+  
+  .award-card {
+    background: #f9fafb;
+    border-left: 4px solid rgba(254, 203, 0, 0.939);; /* academic blue accent */
+    border-radius: 6px;
+    padding: 12px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .award-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .award-card strong {
+    font-size: 1.5rem;
+    color: #111827;
+  }
+  
+  .award-card p {
+    margin: 4px 0 0;
+    font-size: 2rem;
+    color: #374151;
+    line-height: 1.4;
+  }
 
 #contact-form label.error {
     margin-top: 10px;
