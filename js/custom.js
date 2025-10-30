@@ -1,6 +1,6 @@
 // JavaScript Document
 
-$(window).load(function () {
+$(window).on('load', function () {
     "use strict";
     // makes sure the whole site is loaded
     $('#status').fadeOut(); // will first fade out the loading animation
@@ -39,11 +39,15 @@ $(document).ready(function () {
         var $el = $(this),
             id = $el.attr('href');
 
-        $('html, body').animate({
-            scrollTop: $(id).offset().top - nav_height + 2
-        }, 600);
+        // Only handle internal anchor links (starting with #)
+        if (id && id.charAt(0) === '#') {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - nav_height + 2
+            }, 600);
 
-        return false;
+            return false;
+        }
+        // Allow external links (like cv.pdf) to work normally
     });
 
 
